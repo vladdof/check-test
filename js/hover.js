@@ -24,11 +24,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
 			for ( let i = 0; i < answerBlock.length; i++ ) {
 				answerBlock[i].addEventListener('mouseover', function () {
-					showPic();
+					showHint();
 				});
 
 				answerBlock[i].addEventListener('mouseout', function (){
-					hidePic();
+					hideHint();
 				});
 			}
 		    
@@ -38,12 +38,12 @@ window.addEventListener("DOMContentLoaded", function() {
 		    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 		}
 
-		function showPic() {
+		function showHint() {
 			hintBlock.style.display = 'flex';
 			emptyBlock.style.display = 'none';
 		}
 
-		function hidePic() {
+		function hideHint() {
 			hintBlock.style.display = 'none';
 			emptyBlock.style.display = 'block';
 		}
