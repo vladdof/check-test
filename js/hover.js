@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		if (isTouchDevice() === true) {	
 
-		    wrapBlock.addEventListener('touchstart', function(event) {
+		    wrapBlock.addEventListener('mouseenter', function(event) {
 		        
 		        let target = event.target;
 		    	event.preventDefault();
