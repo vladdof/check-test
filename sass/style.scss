@@ -201,6 +201,17 @@ section {
       margin-left: 0;
     }
   }
+  .answer {
+    &_wrong:focus {
+      // box-shadow: 0px 13px 30px -9px rgba(241, 0, 0, 0.83);
+      box-shadow: 0px 13px 34px 2px rgba(241, 0, 0, 0.83);
+    }
+
+    &_right:focus {
+      // box-shadow: 0px 13px 30px -9px rgba(255, 112, 0, 0.83);
+      box-shadow: 0px 13px 34px 2px rgba(255, 112, 0, 0.83);
+    }
+  }
 }
 
 @media (max-width: 860px) {
