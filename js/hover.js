@@ -6,21 +6,21 @@ window.addEventListener("DOMContentLoaded", function() {
 			emptyBlock = wrapBlock.querySelector('.empty'),
 			count = 0;
 
-		if (isTouchDevice() === true) {	
+		// if (isTouchDevice() === true) {	
 
-		    wrapBlock.addEventListener('mouseenter', function(event) {
+		//     wrapBlock.addEventListener('mouseenter', function(event) {
 		        
-		        let target = event.target;
-		    	event.preventDefault();
+		//         let target = event.target;
+		//     	event.preventDefault();
 		        
-		    	if (target.className == 'answer') {
-		    	    showHint();
-		    	} else {;
-		    	    hideHint();
-		    	}
-		    }, false);
+		//     	if (target.className == 'answer') {
+		//     	    showHint();
+		//     	} else {;
+		//     	    hideHint();
+		//     	}
+		//     }, false);
 
-		} else {
+		// } else {
 
 			for ( let i = 0; i < answerBlock.length; i++ ) {
 				answerBlock[i].addEventListener('mouseover', function () {
@@ -32,11 +32,11 @@ window.addEventListener("DOMContentLoaded", function() {
 				});
 			}
 		    
-		}
+		// }
 
-		function isTouchDevice() {
-		    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-		}
+		// function isTouchDevice() {
+		//     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+		// }
 
 		function showHint() {
 			hintBlock.style.display = 'flex';
@@ -47,16 +47,6 @@ window.addEventListener("DOMContentLoaded", function() {
 			hintBlock.style.display = 'none';
 			emptyBlock.style.display = 'block';
 		}
-
-		// window.onresize = function() {
-		// 	let	width = window.innerWidth;
-
-		// 	if (width <= 992) {
-				
-		// 	} 
-		// 	if (width > 992) {
-		// 	}
-		// }
 	}
 
 	hoverHint();
