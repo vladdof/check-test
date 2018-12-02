@@ -6,38 +6,16 @@ window.addEventListener("DOMContentLoaded", function() {
 			emptyBlock = wrapBlock.querySelector('.empty'),
 			count = 0;
 
-		// if (isTouchDevice() === true) {	
+		for ( let i = 0; i < answerBlock.length; i++ ) {
+			answerBlock[i].addEventListener('mouseover', function () {
+				showHint();
+			});
 
-		//     wrapBlock.addEventListener('mouseenter', function(event) {
-		        
-		//         let target = event.target;
-		//     	event.preventDefault();
-		        
-		//     	if (target.className == 'answer') {
-		//     	    showHint();
-		//     	} else {;
-		//     	    hideHint();
-		//     	}
-		//     }, false);
-
-		// } else {
-
-			for ( let i = 0; i < answerBlock.length; i++ ) {
-				answerBlock[i].addEventListener('mouseover', function () {
-					showHint();
-				});
-
-				answerBlock[i].addEventListener('mouseout', function (){
-					hideHint();
-				});
-			}
+			answerBlock[i].addEventListener('mouseout', function (){
+				hideHint();
+			});
+		}
 		    
-		// }
-
-		// function isTouchDevice() {
-		//     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-		// }
-
 		function showHint() {
 			hintBlock.style.display = 'flex';
 			emptyBlock.style.display = 'none';
