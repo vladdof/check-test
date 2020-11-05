@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function() {
 	function hoverHint() {
 		let wrapBlock = document.querySelector('.main'),
-		    answerBlock = document.querySelectorAll('.answer'),
+			answerBlock = document.querySelectorAll('.answer'),
 			hintBlock = wrapBlock.querySelector('.hint'),
 			emptyBlock = wrapBlock.querySelector('.empty'),
 			count = 0;
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function() {
 				hideHint();
 			});
 		}
-		    
+
 		function showHint() {
 			hintBlock.style.display = 'flex';
 			emptyBlock.style.display = 'none';
@@ -29,5 +29,3 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	hoverHint();
 });
-	
-
